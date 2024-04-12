@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coltaine</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="manifest" href="site.webmanifest">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+            font-family: Helvetica, sans-serif;
+            background-color: black;
+        }
+
+        #header {
+            position: relative;
+            width: 100%;
+            height: 95vh;
+            background-image: url('coltaine.jpg');
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-position: top center; /* Bild wird oben im Container zentriert */
+        }
+
+        #links-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px; /* Größerer horizontaler Abstand oben und unten, 40px für den Seitenrand */
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        #links-container a:first-child {
+            margin-left: 20px; /* Zusätzlicher Abstand für den ersten Link */
+        }
+
+        #links-container a:last-child {
+            margin-right: 20px; /* Zusätzlicher Abstand für den letzten Link */
+        }
+
+        @media only screen and (max-width: 768px) {
+            #header {
+                height: 30vh; /* Adjusted height for smaller screens */
+            }
+
+            #links-container {
+                display: none; /* Verberge den Links-Container in der mobilen Ansicht */
+            }
+
+            #logo {
+                background-color: black;
+                padding: none;
+                display: flex;
+                justify-content: center;
+            }
+            
+            #mobilelinks-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0px 20px 70px 20px; /* Add space between the Header and Links containers */
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+            }
+
+            #mobilelinks-inner-container {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                gap: 5px; /* Adjust gap between links */
+                align-content: center;
+                flex-direction: column;
+                align-items: center;
+                
+            }
+
+            #mobilelinks-inner-container a {
+                color: #7B7B7B; /* Ändern Sie die Farbe der Links nach Ihren Wünschen */
+                text-decoration: none;
+                transition: color 0.3s, transform 0.3s;
+                font-size: 13px;
+                padding: 0px 10px 25px 10px; /* Adjusted padding */
+            }
+
+            #about-inner-container {
+                min-width: 65%; /* Setze die maximale Breite auf 65% der Bildschirmbreite in der mobilen Ansicht */
+                margin: 0 auto; /* Zentriere den Container horizontal */
+            }
+            
+            #about-inner-container p {
+                margin: 0;
+                font-size: 14px;
+            }
+            
+            #contact {
+                position: relative;
+                margin-top: 20px; /* Add space between the About and Contact containers */
+            }
+
+            #contact-inner-container {
+                width: 80%; /* Adjusted width for mobile view */
+                margin: 0 auto; /* Center the inner contact container */
+            }
+        }
+
+        a {
+            color: #CCCCCC;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+            font-size: 13px;
+            padding: 10px 15px; /* Adjusted padding */
+        }
+
+        a:hover {
+            color: white;
+            transform: scale(1.05);
+        }
+
+        #container {
+            color: #777777;
+            padding: 0px;
+            text-align: center;
+        }
+
+
+        #about-container {
+            background-color: black;
+            padding: 0px 0px 100px 0px;
+            color: #CCCCCC;
+            line-height: 1.5;
+
+        }
+
+        #about-inner-container {
+            max-width: 25%; /* Adjusted max-width */
+            margin: 0 auto;
+            text-align: center;
+            padding: 0px;
+            color: #7b7b7b; /* Ändern Sie die Textfarbe auf Weiß */
+            font-size: 16px; /* Ändern Sie die Schriftgröße auf 16px */
+            font-style: italic; /* Fügt kursiven Stil hinzu */
+        }
+
+
+        #about-inner-container p {
+            margin: 0;
+        }
+        
+        #contact {
+            background-color: black;
+            color: #CCCCCC;
+            text-align: center;
+            font-size: 12px;
+            padding: 0px 0px 20px 0px ;
+        }
+
+        #contact-inner-container {
+            max-width: 80%; /* Adjusted max-width for mobile view */
+            margin: 0 auto; /* Center the inner contact container */
+        }
+
+        @media only screen and (min-width: 768px) {
+
+            
+            #mobilelinks-container {
+                display: none;
+            }
+
+            #logo {
+                background-color: black;
+                padding: 30px;
+                display: flex;
+                justify-content: center;
+            }
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="links-container">
+            <a href="https://www.instagram.com/coltaine?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw==" target="_blank">INSTAGRAM</a>
+            <a href="https://www.facebook.com/coltaineband" target="_blank">FACEBOOK</a>
+            <a href="https://open.spotify.com/intl-de/artist/70yPlbbWZMGahPVFUvIdNG?si=RxtXYHb5QmCeSFc7BesOmg" target="_blank">SPOTIFY</a>
+            <a href="https://coltaine.bandcamp.com/album/coltaine-gorit" target="_blank">BANDCAMP</a>
+            <a href="https://www.songkick.com/artists/10196934-coltaine/calendar" target="_blank">TOUR DATES</a>
+            <a href="https://www.youtube.com/watch?v=ZVPlapGj0lA" target="_blank">VIDEO</a>
+            <a href="#contact" id="contact-link">CONTACT</a> <!-- Added id="contact-link" -->
+        </div>
+    </div>
+
+    <div id="container">
+        <div id="logo">
+            <img src="logo.svg" alt="Logo" width="190" height="190">
+        </div>
+    </div>
+
+    <!-- Container für die mobilen Links -->
+    <div id="mobilelinks-container">
+        <div id="mobilelinks-inner-container">
+            <a href="https://www.instagram.com/coltaine?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw==" target="_blank">INSTAGRAM</a>
+            <a href="https://www.facebook.com/coltaineband" target="_blank">FACEBOOK</a>
+            <a href="https://open.spotify.com/intl-de/artist/70yPlbbWZMGahPVFUvIdNG?si=RxtXYHb5QmCeSFc7BesOmg" target="_blank">SPOTIFY</a>
+            <a href="https://coltaine.bandcamp.com/album/coltaine-gorit" target="_blank">BANDCAMP</a>
+            <a href="https://www.songkick.com/artists/10196934-coltaine/calendar" target="_blank">TOUR DATES</a>
+            <a href="https://www.youtube.com/watch?v=ZVPlapGj0lA" target="_blank">VIDEO</a>
+            <a href="#contact" id="contact-link">CONTACT</a> <!-- Added id="contact-link" -->
+        </div>
+    </div>
+
+
+    <div id="about-container">
+        <div id="about-inner-container">
+            <p>Coltaine is the keyword to an adventure in sound. Formed in 2022 in the mystic atmosphere of the Black Forest, Germany, Coltaine transport their intuitive creations into unusually exciting and diverse microcosms of dark, atmospheric psychedelia whose feeling is that of foggy, post metal-tinged acid rock with the sombre hues of blackgaze. With a personal sound that defies all categorizations, Coltaine are ready to embark on a quest across the deep, misty realms of their own musical craft.
+            </p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>Past Shows</p>
+            <br>
+            
+            <a href="https://scontent.cdninstagram.com/v/t51.29350-15/380920557_1043092343400039_5478322447015385896_n.webp?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYyOTM1MCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=103&_nc_ohc=Oc7vcB6xGvkAb4YyFSU&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzE5NTMwNzEzMTAyNzcwNTAyNw%3D%3D.2-ccb7-5&oh=00_AfCIHsQqRzG8Iz1tBprctXRiDYDN-P4rhFjY5PETHatLDA&oe=661E72E8&_nc_sid=10d13b" target="_blank">Forgotten Ways European Tour 2023</a>
+            <br>
+
+            <a href="https://scontent.cdninstagram.com/v/t51.29350-15/354001126_1470417397095724_7877697346166152954_n.webp?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYyOTM1MCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=104&_nc_ohc=fI8xLYsSjiAAb4igaJw&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzEyNjQxMzEyOTk0NzMyNTA2Nw%3D%3D.2-ccb7-5&oh=00_AfDN0BmfNosLGU3gKwsWM36ckzUR6etfmBj64DhuiaXVlg&oe=661C5A9A&_nc_sid=10d13b" target="_blank">Coltaine Summer Tour 2023</a>
+            <br>
+
+            <a href="https://scontent.cdninstagram.com/v/t51.29350-15/338298444_2691902514285300_6916651372740159569_n.webp?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi43MjB4NzIwLnNkci5mMjkzNTAifQ&_nc_ht=scontent.cdninstagram.com&_nc_cat=100&_nc_ohc=29MEw5y_jT4Ab5liraP&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzA2ODQ1NDA5NzY1MTc3NjExMw%3D%3D.2-ccb7-5&oh=00_AfA-R1QKGkGSYz4jdsKrlou6EHwt4rLFDhOJV9nmfHg1Hg&oe=661E9D6A&_nc_sid=10d13b" target="_blank">Coltaine April Tour 2023</a>
+            <br>
+
+            <a href="https://scontent.cdninstagram.com/v/t51.29350-15/318940755_1237462090533641_3047913237605926333_n.webp?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYyOTM1MCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=105&_nc_ohc=URt850HdwkQAb45J50z&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=Mjk4ODc5NjM3MzQ1Mjc1ODIyNA%3D%3D.2-ccb7-5&oh=00_AfBZA7HtTRZpPzbJwfz5wFX_923tQ1C5ec2bXOfGBYvr4A&oe=661E6AF2&_nc_sid=10d13b" target="_blank">Tales of Southern Lands Tour 2023</a>
+            <br>
+
+            <a href="https://scontent.cdninstagram.com/v/t51.29350-15/298489083_1413909675796953_2551573223091060308_n.webp?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYyOTM1MCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=109&_nc_ohc=QJyV8C9TbAoAb7O37ZX&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MjkwMDk0NzkwMTU3MTA5OTQ3NQ%3D%3D.2-ccb7-5&oh=00_AfB9YOTMLvG7fqgiISlyiW9XHxRW0hrsue0KrzYL3zR5Gw&oe=661E5007&_nc_sid=10d13b" target="_blank">Summer Death Anthems Tour 2022</a>
+            <br>
+
+            
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    
+    <!-- Container für den Kontaktabschnitt -->
+    <div id="contact">
+        <div id="contact-inner-container">
+            <p>booking@coltaine-band.com</p>
+        </div>      
+    </div>
+
+
+
+</body>
+</html>
